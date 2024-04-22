@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FormularioCarga.aspx.cs" Inherits="Parcial1.FormularioCarga" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Vista.aspx.cs" Inherits="Parcial1.Ver" %>
 
 <!DOCTYPE html>
 

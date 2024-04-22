@@ -67,33 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FormularioCarga.aspx" />
-    <Content Include="Menu.aspx" />
-    <Content Include="Ver.aspx" />
+    <Content Include="Carga.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Vista.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormularioCarga.aspx.cs">
-      <DependentUpon>FormularioCarga.aspx</DependentUpon>
+    <Compile Include="Carga.aspx.cs">
+      <DependentUpon>Carga.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FormularioCarga.aspx.designer.cs">
-      <DependentUpon>FormularioCarga.aspx</DependentUpon>
+    <Compile Include="Carga.aspx.designer.cs">
+      <DependentUpon>Carga.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ver.aspx.cs">
-      <DependentUpon>Ver.aspx</DependentUpon>
+    <Compile Include="Vista.aspx.cs">
+      <DependentUpon>Vista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Ver.aspx.designer.cs">
-      <DependentUpon>Ver.aspx</DependentUpon>
+    <Compile Include="Vista.aspx.designer.cs">
+      <DependentUpon>Vista.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
