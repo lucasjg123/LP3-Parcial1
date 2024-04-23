@@ -17,14 +17,14 @@
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <p>
             <asp:Label ID="Label2" runat="server" Text="Tipo: "></asp:Label>
-            <asp:DropDownList ID="DropDownList1" runat="server">
+            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
             </asp:DropDownList>
         </p>
         <asp:Label ID="Label3" runat="server" Text="Codigo: "></asp:Label>
-        <asp:Label ID="Label4" runat="server" Text="1"></asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:Label ID="lblCodigo" runat="server" Text=".."></asp:Label>
+        <asp:TextBox ID="txtCodigo" runat="server" Enabled="False"></asp:TextBox>
         <p>
-            <asp:Button ID="Button1" runat="server" Text="Guardar" />
+            <asp:Button ID="btnCargar" runat="server" Text="Cargar" Enabled="False" OnClick="btnCargar_Click" />
         </p>
         <p>
             <asp:Label ID="Label5" runat="server" Text="La carga fue exitosa"></asp:Label>
