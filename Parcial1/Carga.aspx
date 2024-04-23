@@ -26,6 +26,9 @@
         <p>
             <asp:Button ID="Button1" runat="server" Text="Guardar" />
         </p>
+        <p>
+            <asp:Label ID="Label5" runat="server" Text="La carga fue exitosa"></asp:Label>
+        </p>
     </form>
 </body>
 </html>
