@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -33,6 +34,25 @@ namespace Parcial1
             }
         }
 
+        private string ValidarDatos()
+        {
+            string error = "ERROR \n";
+
+            // Validar que los txt no esten vacios
+            if (txtNombre.Text.Trim().Length == 0) error += "- Debe ingresar un nombre \n";
+            if (txtCodigo.Text.Trim().Length == 0) error += "- Debe ingresar un codigo \n";
+            else // Validar que el txtcodigo solo contenga nros
+            {
+                // Definimos expresion regular de solo nros
+                Regex regex = new Regex("^[0-9]+$");
+
+                if (!regex.IsMatch(txtCodigo.Text.Trim())) error += "- Sólo se permiten nros en el codigo";
+            }
+
+            return error;
+        }
+
+        /* EVENTOS */
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarTipos();
@@ -58,8 +78,12 @@ namespace Parcial1
         }
 
         protected void btnCargar_Click(object sender, EventArgs e)
-        {
+        { 
+            // Validar datos
+            string msj = ValidarDatos();
+            if (msj.Length != 0) lblResponse.Text = msj;
 
+            // extraer los datos y guardarlos en un txt
         }
     }
 }

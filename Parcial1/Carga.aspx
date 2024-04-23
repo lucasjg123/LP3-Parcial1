@@ -6,6 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        #form1 {
+            height: 294px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -14,7 +19,7 @@
         <br />
         Formulario de Carga<br />
         <asp:Label ID="Label1" runat="server" Text="Nombre:  "></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
         <p>
             <asp:Label ID="Label2" runat="server" Text="Tipo: "></asp:Label>
             <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
@@ -27,7 +32,7 @@
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" Enabled="False" OnClick="btnCargar_Click" />
         </p>
         <p>
-            <asp:Label ID="Label5" runat="server" Text="La carga fue exitosa"></asp:Label>
+            <asp:Label ID="lblResponse" runat="server" Text="La carga fue exitosa"></asp:Label>
         </p>
     </form>
 </body>
