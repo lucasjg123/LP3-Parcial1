@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -36,20 +37,45 @@ namespace Parcial1
 
         private string ValidarDatos()
         {
-            string error = "ERROR \n";
+            string error = "";
 
             // Validar que los txt no esten vacios
-            if (txtNombre.Text.Trim().Length == 0) error += "- Debe ingresar un nombre \n";
-            if (txtCodigo.Text.Trim().Length == 0) error += "- Debe ingresar un codigo \n";
+            if (txtNombre.Text.Trim().Length == 0) error += "- Debe ingresar un nombre <br/>";
+            if (txtCodigo.Text.Trim().Length == 0) error += "- Debe ingresar un codigo <br/>";
             else // Validar que el txtcodigo solo contenga nros
             {
                 // Definimos expresion regular de solo nros
                 Regex regex = new Regex("^[0-9]+$");
 
-                if (!regex.IsMatch(txtCodigo.Text.Trim())) error += "- Sólo se permiten nros en el codigo";
+                if (!regex.IsMatch(txtCodigo.Text.Trim())) error += "- Sólo se permiten nros en el codigo <br/>";
             }
 
+            // Si sucedio algun error le agregamos el titulo
+            if (error.Length != 0) error = "ERROR <br/>" + error;
+
             return error;
+        }
+
+
+        private void Guardar()
+        {
+            // extraer datos
+            string nombre = txtNombre.Text.Trim();
+            string tipo = DropDownList1.SelectedItem.ToString();
+            string codigo = lblCodigo.Text + txtCodigo.Text.Trim();
+
+            // guardar en txt
+            StreamWriter arch = new StreamWriter(Server.MapPath(".") + "cuentas.txt", true);
+            arch.WriteLine("<hr>");
+            arch.WriteLine("Nombre: " + nombre + "<br/>");
+            arch.WriteLine("Tipo: " + tipo + "<br/>");
+            arch.WriteLine("Código: " + codigo + "<br/>");
+            arch.WriteLine("<hr>");
+
+            arch.Close();
+
+            // Enviamos msj de exito
+            lblResponse.Text = "La carga fue exitosa";
         }
 
         /* EVENTOS */
@@ -81,9 +107,15 @@ namespace Parcial1
         { 
             // Validar datos
             string msj = ValidarDatos();
-            if (msj.Length != 0) lblResponse.Text = msj;
+            if (msj.Length != 0) {
+                lblResponse.Text = msj;
+                return;
+            }
+            
 
             // extraer los datos y guardarlos en un txt
+            Guardar();
+
         }
     }
 }

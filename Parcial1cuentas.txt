@@ -1,0 +1,15 @@
+<hr>
+Nombre: insumos<br/>
+Tipo: Pasivo<br/>
+Código: 23<br/>
+<hr>
+<hr>
+Nombre: remito<br/>
+Tipo: Pasivo<br/>
+Código: 777<br/>
+<hr>
+<hr>
+Nombre: servicios básicos<br/>
+Tipo: Pasivo<br/>
+Código: 2345<br/>
+<hr>

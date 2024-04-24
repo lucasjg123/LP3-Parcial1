@@ -32,7 +32,7 @@
             <asp:Button ID="btnCargar" runat="server" Text="Cargar" Enabled="False" OnClick="btnCargar_Click" />
         </p>
         <p>
-            <asp:Label ID="lblResponse" runat="server" Text="La carga fue exitosa"></asp:Label>
+            <asp:Label ID="lblResponse" runat="server"></asp:Label>
         </p>
     </form>
 </body>

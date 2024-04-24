@@ -10,7 +10,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Index.aspx">Volver al Home</asp:HyperLink>
         </div>
+        <p>
+            <asp:Label ID="lblVista" runat="server"></asp:Label>
+        </p>
     </form>
 </body>
 </html>
