@@ -13,3 +13,13 @@ Nombre: servicios básicos<br/>
 Tipo: Pasivo<br/>
 Código: 2345<br/>
 <hr>
+<hr>
+Nombre: cheque<br/>
+Tipo: Activo<br/>
+Código: 1323<br/>
+<hr>
+<hr>
+Nombre: Efectivo<br/>
+Tipo: Activo<br/>
+Código: 1000<br/>
+<hr>

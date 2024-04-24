@@ -11,6 +11,16 @@ namespace Parcial1
 {
     public partial class FormularioCarga : System.Web.UI.Page
     {
+        private void LimpiarComponentes()
+        {
+            txtNombre.Text = "";
+            DropDownList1.SelectedIndex = 0;
+            // quitamos el nro identificador de tipo
+            lblCodigo.Text = "..";
+            // limpiamos txt
+            txtCodigo.Text = "";
+        }
+
         private void HabilitarControles(bool x)
         {
             //deshabilitamos el txtcodigo
@@ -56,7 +66,6 @@ namespace Parcial1
             return error;
         }
 
-
         private void Guardar()
         {
             // extraer datos
@@ -86,14 +95,14 @@ namespace Parcial1
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
             // Si no se selecciona un tipo
             if (DropDownList1.SelectedIndex == 0)
             {
                 HabilitarControles(false);
                 // quitamos el nro identificador de tipo
                 lblCodigo.Text = "..";
+                // limpiamos txt
+                txtCodigo.Text = "";
             }
             else
             {
@@ -115,7 +124,9 @@ namespace Parcial1
 
             // extraer los datos y guardarlos en un txt
             Guardar();
-
+            // Limpiar componentes
+            LimpiarComponentes();
+            HabilitarControles(false);
         }
     }
 }
