@@ -1,0 +1,10 @@
+<hr>
+Nombre: Efectivo<br/>
+Tipo: Activo<br/>
+Código: 13333<br/>
+<hr>
+<hr>
+Nombre: gastos<br/>
+Tipo: Pasivo<br/>
+Código: 2777<br/>
+<hr>

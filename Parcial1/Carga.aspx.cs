@@ -74,7 +74,7 @@ namespace Parcial1
             string codigo = lblCodigo.Text + txtCodigo.Text.Trim();
 
             // guardar en txt
-            StreamWriter arch = new StreamWriter(Server.MapPath(".") + "cuentas.txt", true);
+            StreamWriter arch = new StreamWriter($"{Server.MapPath(".")}/cuentas.txt", true);
             arch.WriteLine("<hr>");
             arch.WriteLine("Nombre: " + nombre + "<br/>");
             arch.WriteLine("Tipo: " + tipo + "<br/>");

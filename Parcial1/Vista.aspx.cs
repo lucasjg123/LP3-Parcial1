@@ -12,14 +12,14 @@ namespace Parcial1
     {
         private void MostrarTxt()
         {
-            string ruta = Server.MapPath(".") + "cuentas.txt";
+            string ruta = $"{Server.MapPath(".")}/cuentas.txt";
 
             if (!File.Exists(ruta)) {
                 lblVista.Text = "No existen datos";
                 return;
             }
 
-            StreamReader streamReader = new StreamReader(Server.MapPath(".") + "cuentas.txt");
+            StreamReader streamReader = new StreamReader($"{Server.MapPath(".")}/cuentas.txt");
             lblVista.Text = streamReader.ReadToEnd();
             streamReader.Close();
         }
